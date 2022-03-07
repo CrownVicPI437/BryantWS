@@ -5,9 +5,12 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BlazorApp1" expanded="True">
-            <Node name="BlazorApp1" expanded="True" selected="True" />
+            <Node name="BlazorApp1" expanded="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
