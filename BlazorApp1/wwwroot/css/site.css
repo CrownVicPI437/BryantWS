@@ -136,8 +136,90 @@ body{
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
-    margin-right: 65%;
+    margin-right: 15%;
     padding-top: 6.5rem;
-    margin-left: 10%;
+    margin-left: 5%;
+}
+.secondInfoPanel {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 15%;
+    padding-top: 6.5rem;
+    margin-left: 5%;
+}
+
+/*SVG css*/
+.b9662909-398f-4491-b817-7a98ffdc8fa1 {
+    fill: none;
+}
+
+.ad4468d5-c953-47cb-96fd-886884713d8f {
+    isolation: isolate;
+}
+
+.b54efc8d-f87b-4af7-8b4a-33e67ace393f, .ff1206a5-038d-4a7a-82e5-20f979472461 {
+    mix-blend-mode: multiply;
+}
+
+.b54efc8d-f87b-4af7-8b4a-33e67ace393f {
+    opacity: 0.75;
+}
+
+.af2e1696-e0b6-4c02-8a81-296c002c68c7 {
+    clip-path: url(#f39c2212-bf29-4936-bc5b-d841fe304bec);
+}
+
+.ff1206a5-038d-4a7a-82e5-20f979472461 {
+    opacity: 0.36;
+}
+
+.a5594149-60ed-445e-9bc6-2170f6e18aac {
+    font-size: 95.34px;
+}
+
+.a5594149-60ed-445e-9bc6-2170f6e18aac, .ab2af19f-4d79-40f1-b8e6-6813369b823a {
+    fill: #fff;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    font-family: MicrosoftJhengHeiUIRegular, Microsoft JhengHei UI;
+}
+
+.b6333b32-3e6b-4f79-95fe-9093434e4d91 {
+    letter-spacing: -0.03em;
+}
+
+.b9dd88df-70eb-421d-be4e-bed3cdb15bc4 {
+    letter-spacing: -0.014em;
+}
+
+.ab2af19f-4d79-40f1-b8e6-6813369b823a {
+    font-size: 45.358px;
+    stroke-width: 0.75px;
+}
+
+.b66c4b12-790e-45c3-baab-fda2eef10450 {
+    letter-spacing: -0.035em;
+}
+
+.a3003959-7745-429e-b51c-b1c197aa45f7 {
+    letter-spacing: 0em;
+}
+
+.abad3eaf-9cca-48bd-881e-e4761fa03324 {
+    letter-spacing: 0.031em;
+}
+
+.bc55b593-7b74-4b1b-9e30-3673223848c8 {
+    letter-spacing: -0.111em;
+}
+
+.b20e2104-6be4-41e2-98c1-3bbe2e28dd81 {
+    letter-spacing: -0.026em;
 }
