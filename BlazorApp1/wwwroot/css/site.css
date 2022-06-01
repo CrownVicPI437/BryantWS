@@ -89,14 +89,13 @@ a, .btn-link {
     background-color: #adb5bd;
     color: #4f5050;
 }
-body{
-    background-image: url("../Media/Images/MainBanner.png");
-    background-position: initial;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 800px;
-}
+/*body{*/
+/*    background-image: url("../Media/Images/MainBanner.png");*/
+/*    background-position: center top;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100% auto;*/
+/*   */
+/*}*/
 .homepage-artical{
     /*box-shadow: 0px -0.6rem 0.8rem 0.6rem #ffffff;*/
 }
@@ -153,6 +152,12 @@ body{
     margin-right: 15%;
     padding-top: 6.5rem;
     margin-left: 5%;
+}
+
+@media only screen and (max-device-height: 480px) {
+    .custom-img{
+        height: 40%;
+    }
 }
 
 /*SVG css*/
@@ -223,3 +228,8 @@ body{
 .b20e2104-6be4-41e2-98c1-3bbe2e28dd81 {
     letter-spacing: -0.026em;
 }
+
+/*Testing*/
+
+
+
