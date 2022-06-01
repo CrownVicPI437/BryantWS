@@ -186,7 +186,8 @@ section.hero .down-arrow path {
     margin-bottom: 8em;
   }
   .feature img {
-    width: 25em;
+    width: 50%;
+    height: 100%;
   }
   .feature .content {
     text-align: right;
