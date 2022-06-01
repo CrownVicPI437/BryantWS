@@ -227,7 +227,8 @@ section.hero {
     img {
       grid-area: left;
       width: 50%;
-      height: 50%;
+      height: 100%;
+      align-content: center;
     }
 
     .content {
