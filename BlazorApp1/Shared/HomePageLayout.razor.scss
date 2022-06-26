@@ -242,6 +242,28 @@ section.hero {
 
 }
 
+.extra-info{
+  display: grid;
+  background-color: rgba(240,240,240, 0.8);
+  grid-template-columns: repeat(3, 1fr);
+  border: rgba(240,240,240, .8) solid;
+  border-radius: 0.2rem;
+  padding: .7rem;
+  width: fit-content;
+  img{
+    grid-area: bottom;
+    width: 50%;
+    height: 100%;
+    align-content: center;
+  }
+  .content{
+    text-align: center;
+    width: 26em;
+    justify-self: left;
+    margin-right: .9rem;
+  }
+}
+
 
 @media only screen and (min-width: 1200px) {
   .wrapper {
