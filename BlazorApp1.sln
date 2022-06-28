@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{2BD690DA-871F-46C8-AA0E-D8B717A6F2D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{354C16F0-38F4-49AB-BC90-CD4E1DE19811} = {354C16F0-38F4-49AB-BC90-CD4E1DE19811}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteAPI", "SiteAPI\SiteAPI.csproj", "{354C16F0-38F4-49AB-BC90-CD4E1DE19811}"
-	ProjectSection(ProjectDependencies) = postProject
-		{2BD690DA-871F-46C8-AA0E-D8B717A6F2D0} = {2BD690DA-871F-46C8-AA0E-D8B717A6F2D0}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

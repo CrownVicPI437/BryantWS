@@ -25,4 +25,7 @@
     <ItemGroup>
       <None Remove="Shared\HomePageLayout.razor.css.scss" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\SiteAPI\SiteAPI.csproj" />
+    </ItemGroup>
 </Project>
