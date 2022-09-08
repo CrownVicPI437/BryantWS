@@ -27,5 +27,6 @@
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\SiteAPI\SiteAPI.csproj" />
+      <ProjectReference Include="..\ViewModelClass\ViewModelClass.csproj" />
     </ItemGroup>
 </Project>
