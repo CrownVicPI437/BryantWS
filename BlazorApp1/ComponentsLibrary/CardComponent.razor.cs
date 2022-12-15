@@ -13,5 +13,20 @@ namespace BlazorApp1.ComponentsLibrary
         [Parameter] public string? BodyThree { get; set; }
 
         public CardComponentVM ComponentVm { get; set; } = new CardComponentVM();
+
+        public void EditMethod()
+        {
+            
+        }
+
+        public void UpdateContext()
+        {
+            
+        }
+
+        public void UpdateImages()
+        {
+            
+        }
     }
 }

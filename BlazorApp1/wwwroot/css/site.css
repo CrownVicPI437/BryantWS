@@ -31,6 +31,20 @@ a, .btn-link {
 .validation-message {
     color: red;
 }
+.btn-site-primary{
+    color: #fff;
+    padding: .75rem;
+    background-color: #1b6ec2;
+    font-size: 1.2rem;
+    border-radius: .25rem;
+    border-color: #1861ac;
+}
+.btn-site-primary:hover{
+    background-color: #2181E2FF;
+    border-color: #1D73CBFF;
+    -webkit-animation: pulsate-fwd 1.2s ease-in-out infinite both;
+    animation: pulsate-fwd 1.2s ease-in-out infinite both;
+}
 
 #blazor-error-ui {
     background: lightyellow;
@@ -60,6 +74,45 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+
+
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 0.9s ease-in-out infinite both;
+    animation: pulsate-fwd 0.9s ease-in-out infinite both;
+}
+
+
+/* Animations */
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
     
     
 /*Start of custom css components*/
@@ -215,5 +268,6 @@ a, .btn-link {
 }
 
 /*Testing*/
+
 
 

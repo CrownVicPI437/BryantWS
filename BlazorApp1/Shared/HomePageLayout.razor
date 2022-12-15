@@ -1,3 +1,4 @@
+@using System.Diagnostics
 @inherits LayoutComponentBase
 
 <PageTitle>ShowMe Repair</PageTitle>
@@ -13,19 +14,34 @@
 
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="nav-text">Home</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="/media">Media</a>
+                    <a href="/media">
+                        <span class="icon"></span>
+                        <span class="nav-text">Media</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="/Aboutpage">About</a>
+                    <a href="/Aboutpage">
+                        <span class="icon"></span>
+                        <span class="nav-text">About</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="nav-text">Services</span>
+                    </a>
                 </li>
                 <li>
-                    
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="nav-text">Login</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -37,14 +53,16 @@
 
     <section class="hero">
         <h1>Regain your confidence in your vehicle.</h1>
-
         <p class="subhead">How-tos to put confidence back in your ride!</p>
-
-        <svg class="down-arrow" viewBox="0 0 16 132" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z" fill="black"/>
-        </svg>
+        @if (Width)
+        {
+            <svg class="down-arrow" viewBox="0 0 16 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z" fill="black"/>
+            </svg>
+        }
+        <button  class="btn-site-primary"><a href="mailto:speedy815co@gmail.com" style="color: white; text-decoration: none;">Get in Touch!</a></button>
     </section>
-
+    
     <section class="more-info">
        
         <CardComponent 
