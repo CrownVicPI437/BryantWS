@@ -3,6 +3,7 @@ using Blazored.Modal;
 using Blazored.Modal.Services;
 using Microsoft.AspNetCore.Components;
 using ViewModelClass;
+using Google.Apis;
 
 namespace BlazorApp1.Shared;
 
@@ -17,5 +18,10 @@ public partial class HomePageLayout
     {
         var options = new ModalOptions { Size = ModalSize.Medium};
         BlazorModal.Show<EmailModal>("Get in touch with us" , options );
+    }
+
+    private async Task SignInWithGoogle()
+    {
+        
     }
 }
