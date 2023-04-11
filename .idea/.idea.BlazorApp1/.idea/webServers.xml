@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1472df60-627e-4b62-97fd-14c1f16d98b6" name="jcbryant" url="http://win5144.site4now.net/site2">
+        <fileTransfer rootFolder="/site2" host="win5144.site4now.net" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="9fa135e2-17f2-440d-ac9b-6513632376a2" name="jcbryantapi" url="http://win5144.site4now.net/webapi">
+        <fileTransfer rootFolder="/webapi" host="win5144.site4now.net" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

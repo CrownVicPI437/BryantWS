@@ -16,7 +16,7 @@ public partial class HomePageLayout
 
     public void SendEmail()
     {
-        var options = new ModalOptions { Size = ModalSize.Medium};
+        var options = new ModalOptions { UseCustomLayout = true};
         BlazorModal.Show<EmailModal>("Get in touch with us" , options );
     }
 
