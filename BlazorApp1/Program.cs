@@ -1,3 +1,5 @@
+using BlazorApp1.Interfaces;
+using BlazorApp1.Services;
 using Blazored.Modal;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -30,6 +32,7 @@ builder.Services.AddRazorPages();
 builder.WebHost.UseStaticWebAssets();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddBlazoredModal();
+builder.Services.AddSingleton<IHttpServiceProvider, HttpServiceProvider>();
 
 var app = builder.Build();
 
