@@ -32,7 +32,7 @@ builder.Services.AddRazorPages();
 builder.WebHost.UseStaticWebAssets();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddBlazoredModal();
-builder.Services.AddSingleton<IHttpServiceProvider, HttpServiceProvider>();
+builder.Services.AddScoped<IHttpServiceProvider, HttpServiceProvider>();
 
 var app = builder.Build();
 

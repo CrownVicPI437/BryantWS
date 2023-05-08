@@ -10,6 +10,7 @@ namespace BlazorApp1.ComponentsLibrary.Modals
     {
         [Inject]
         private IHttpServiceProvider services { get; set; }
+        private string UserEmail { get; set; }
         [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; } = default!;
         
         protected MailData mailData { get; set; } = new(new List<string>(),string.Empty,string.Empty, string.Empty,string.Empty,string.Empty,string.Empty,new List<string>(), new List<string>());
@@ -18,13 +19,16 @@ namespace BlazorApp1.ComponentsLibrary.Modals
 
         private async Task SendEmail()
         {
+            mailData.From = "donotreply@showmerepair.com";
             mailData.To.Add("kasoftwareindustries@gmail.com");
-            
+            mailData.Subject = UserEmail;
             var response = services.EmailServiceCall.SendEmailWithUserInfo(mailData);
             if (response.IsCompleted)
             {
                 Console.WriteLine("Email Sent");
             }
+            await BlazoredModal.CloseAsync(ModalResult.Ok(true));
+
             StateHasChanged();
         }
 
