@@ -20,7 +20,7 @@ namespace BlazorApp1.ComponentsLibrary.Modals
         private async Task SendEmail()
         {
             mailData.From = "donotreply@showmerepair.com";
-            mailData.To.Add("kasoftwareindustries@gmail.com");
+            mailData.To.Add("chrisbpowerstroke@gmail.com");
             mailData.Subject = UserEmail;
             var response = services.EmailServiceCall.SendEmailWithUserInfo(mailData);
             if (response.IsCompleted)
