@@ -1,81 +1,53 @@
 @using System.Security.Claims
-@using Microsoft.AspNetCore.Http
-@inject IHttpContextAccessor _httpContextAccessor
-@inject HttpClient Http
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ILogger<LoginControl> Logger;
 
-@if (User.Identity.Name != null)
+@if (User.Identity?.Name != null)
 {
-    <img src="@Avatar" />
+    <img src="@Avatar"/>
     <b>You are logged in as: @GivenName @Surname</b>
     <a class="ml-md-auto btn btn-primary"
-       href="/Logout"
-       target="_top">Logout</a>
+       href="/Identity/Logout"
+       target="_top">
+        Logout
+    </a>
 }
 else
 {
     <a class="ml-md-auto btn btn-primary"
-       href="/Login"
-       target="_top">Login</a>
+       href="/Identity/Login"
+       target="_top">
+        Login
+    </a>
 }
 
-
-@functions {
+@code {
     private ClaimsPrincipal User;
     private string GivenName;
     private string Surname;
     private string Avatar;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        base.OnInitialized();
-
+        await base.OnInitializedAsync();
         try
         {
-    // Set the user to determine if they are logged in
-            User = _httpContextAccessor.HttpContext.User;
+            User = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User;
 
-    // Try to get the GivenName
-            var givenName =
-                _httpContextAccessor.HttpContext.User
-                    .FindFirst(ClaimTypes.GivenName);
+            // Try to get the GivenName
+            var givenName = User.FindFirst(ClaimTypes.GivenName);
+            GivenName = givenName != null ? givenName.Value : User.Identity?.Name ?? "Unknown";
 
-            if (givenName != null)
-            {
-                GivenName = givenName.Value;
-            }
-            else
-            {
-                GivenName = User.Identity.Name;
-            }
+            var surname = User.FindFirst(ClaimTypes.Surname);
+            Surname = surname != null ? surname.Value : User.Identity?.Name ?? "Unknown";
 
-    // Try to get the Surname
-            var surname =
-                _httpContextAccessor.HttpContext.User
-                    .FindFirst(ClaimTypes.Surname);
-
-            if (surname != null)
-            {
-                Surname = surname.Value;
-            }
-            else
-            {
-                Surname = "";
-            }
-
-    // Try to get Avatar
-            var avatar =
-                _httpContextAccessor.HttpContext.User
-                    .FindFirst("urn:google:image");
-
-            if (avatar != null)
-            {
-                Avatar = avatar.Value;
-            }
-            else
-            {
-                Avatar = "";
-            }
+            var avatar = User.FindFirst("urn:google:image");
+            Avatar = avatar != null ? avatar.Value : "";
         }
-        catch { }
+        catch (Exception e)
+        {
+            Logger.LogError(e, "Failed to resolve the authenticated user");
+        }
     }
+
 }
