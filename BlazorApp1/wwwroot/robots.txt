@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /Pages/
+
+User-agent: *
+Allow: /Shared/
+
+User-agent: *
+Disallow: /Interfaces/
+
+User-agent: *
+Disallow: /Context/
+
+User-agent: *
+Allow: /ComponentsLibrary/
+
+User-agent: *
+Disallow: /Properties/
