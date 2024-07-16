@@ -26,7 +26,7 @@ builder.Services.AddServerSideBlazor(options =>
     options.MaxBufferedUnacknowledgedRenderBatches = 4;
 });
 builder.Services.AddBlazoredModal();
-builder.Services.AddScoped<IHttpServiceProvider, HttpServiceProvider>();
+builder.Services.AddHttpClient<IHttpServiceProvider, HttpServiceProvider>();
 builder.Services.AddAuthentication()
     .AddGoogle(options =>
 {
